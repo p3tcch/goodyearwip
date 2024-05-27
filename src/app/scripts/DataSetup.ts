@@ -30,11 +30,6 @@ export default async function DataSetup
         allHistoriesArray = result.histories;
     }
 
-    
-
-
-
-    console.log("Data Sutup Done");
     return {AllPos: allPositionsArray,AllFiles: allFilesArray,AllFilesByPos: allFilesByPos, allHistories : allHistoriesArray };
 }
 
