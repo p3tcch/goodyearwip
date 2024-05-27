@@ -98,7 +98,8 @@ export default function History() {
                             </thead>
                             <tbody>
                                 <>
-                                    {histories[0].file_name !== '' && visibleHistory[0].file_name !== '' ?
+                                    {
+                                        histories[0].file_name !== '' ? 
                                         visibleHistory.map((history, index) => {
                                             return (
                                                 <tr key={index}>
@@ -113,7 +114,8 @@ export default function History() {
                                                     <td className='td hour'><p className='history-hour'>{ISoDateToOnlyHours(history.created_at)} </p></td>
                                                 </tr>
                                             );
-                                        }) : histories[0].file_name !== '' && visibleHistory[0].file_name == '' ? <tr><td> Not Found </td></tr> : <tr><td> Loading . . . </td></tr>}
+                                        }): ''
+                                    }
                                 </>
                             </tbody>
                         </table>
