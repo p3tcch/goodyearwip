@@ -1,8 +1,6 @@
 import MysqlQuery from "@/app/scripts/MysqlQuery";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import DateConverter from "@/app/scripts/DateConverter";
-import {ISoDateToDMY} from "@/app/scripts/DateConverter";
 
 export async function POST(request: Request) {
     const res = await request.json();
@@ -28,8 +26,6 @@ export async function POST(request: Request) {
     const userExp = 86400000 * 6;
     const nearlyExp = 86400000 * 5 // 5 days;
 
-    //console.log((registerDate.getTime() + userExp) - today.getTime(), nearlyExp);
-    //Expired
     if((registerDate.getTime() + userExp) - today.getTime() <= 0) {
         return Response.json({txts: ['User expired'], expire: 'expired'});
     }

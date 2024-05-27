@@ -12,7 +12,7 @@ export async function POST(request: Request) {
     } 
     catch(err) {
         console.error(err);
-        return Response.json({txt:['some thing went wrong']});
+        return Response.json({txt:['something went wrong']});
     }
     
     return Response.json({ txt:['Successfully create history'] });

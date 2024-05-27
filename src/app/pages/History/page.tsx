@@ -41,7 +41,6 @@ export default function History() {
 
     useEffect(() => {
         let result: Array<{ action_type: string, created_at: string, file_name: string, num: string, file_position: string }> = [];
-        console.log('reset search test');
         if (searchPos != 'All') {
             result = histories.filter((history, index) => history.file_position == searchPos);
         } else {

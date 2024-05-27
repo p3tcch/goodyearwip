@@ -7,3 +7,14 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.filesupload-container{
+    width: 30vw;
+    height: 10vw;
+    min-width: 300px;
+    min-height: 200px;
+    border: 1px solid #454545;
+    padding: 10px;
+}
+.filesupload-header{
+    color: #454545;
+}
