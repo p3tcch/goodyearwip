@@ -10,10 +10,10 @@ import Header from '@/app/components/Header/page';
 export default function History() {
 
     const [searchDate, setSearchDate] = useState('');
-    const [AllPos, setAllPos] = useState(Array<{ num: string, name: string, color: string }>)
+    const [AllPos, setAllPos] = useState([{ num: "", name: "", color: "" }])
     const [searchPos, setSearchPos] = useState('All');
-    const [histories, setHistories] = useState(Array<{ action_type: string, created_at: string, file_name: string, num: string, file_position: string }>);
-    const [visibleHistory, setVisibleHistory] = useState(Array<{ action_type: string, created_at: string, file_name: string, num: string, file_position: string }>);
+    const [histories, setHistories] = useState([{ action_type: "", created_at: "", file_name: "", num: "", file_position: "" }]);
+    const [visibleHistory, setVisibleHistory] = useState([{ action_type: "", created_at: "", file_name: "", num: "", file_position: "" }]);
 
 
     const GetHistory = async () => {
@@ -98,7 +98,7 @@ export default function History() {
                             </thead>
                             <tbody>
                                 <>
-                                    {histories.length > 0 && visibleHistory.length > 0 ?
+                                    {histories[0].file_name !== '' && visibleHistory[0].file_name !== '' ?
                                         visibleHistory.map((history, index) => {
                                             return (
                                                 <tr key={index}>
@@ -113,7 +113,7 @@ export default function History() {
                                                     <td className='td hour'><p className='history-hour'>{ISoDateToOnlyHours(history.created_at)} </p></td>
                                                 </tr>
                                             );
-                                        }) : histories.length > 0 && visibleHistory.length == 0 ? <tr><td> Not Found </td></tr> : <tr><td> Loading . . . </td></tr>}
+                                        }) : histories[0].file_name !== '' && visibleHistory[0].file_name == '' ? <tr><td> Not Found </td></tr> : <tr><td> Loading . . . </td></tr>}
                                 </>
                             </tbody>
                         </table>
