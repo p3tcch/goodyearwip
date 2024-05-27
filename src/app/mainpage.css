@@ -1,0 +1,24 @@
+
+.mp-container{
+    position: relative;
+    left: 200px;
+    width: calc( 100vw - 200px );
+    min-height: 100vh;
+    height: auto;
+    padding-top: 40px;
+
+    background-color: #eeeeee;
+    
+}
+.mp-content-container{
+    width: calc(100% - 200px);
+    height: auto;
+
+}
+@media screen and (max-width: 992px) {
+    .mp-container{
+        position: relative;
+        left: 50px;
+        width: calc( 100vw - 50px );
+    }
+  }

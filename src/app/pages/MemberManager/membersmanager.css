@@ -1,0 +1,62 @@
+.mm-container{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #eeeeee;
+
+}
+.mm-txt{
+    color: #ffffff;
+}
+.mm-h1{
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+table{
+    border-collapse: collapse;
+    width: 80vw;
+    text-align: center;
+    background-color: #ffffff;
+}
+tr, td, th{
+   
+    width: 100px;
+    height: 30px;
+}
+th{
+    background-color: #3D3B40;
+    color: #ffffff;
+}
+.mm-button{
+    background-color: #3D3B40;
+    height: 25px;
+    color: #ffffff;
+    margin-right: 5px;
+    margin: 2px 2px 2px 0;
+    border-radius: 5px;
+    border: none;
+}
+.mm-button.action{
+    width: auto;
+    padding: 0 5px 0 5px;
+    height: 25px;
+}
+.mm-button.nav{
+    width: 30px;
+    height: 30px;
+}
+.mm-search-container{
+    width: 80%;
+    height: 30px;
+}
+.mm-search-box{
+    width: calc(130px + 5vw);
+    height: 25px;
+    text-align: center;
+}
+.mm-button.search{
+    width:80px;
+    cursor: pointer;
+    border-radius: 0;
+
+}

@@ -1,95 +1,68 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+import LeftTab from "./components/LeftTab/page";
+import Header from "./components/Header/page";
+import Notification from "./components/Notification/page";
+import SectionOne from "./components/SectionOne/page";
+import Banner from "./components/Banner/page";
+import Graph from "./components/Graph/page";
+
+import "./mainpage.css";
+import jwt from 'jsonwebtoken';
+import Cookies from 'js-cookie';
+import { useState, useEffect } from 'react';
+
 
 export default function Home() {
+
+  const [userData, setUserData] = useState({ username: '', positions: [''] })
+
+
+  const TokenDecoded = async (token: string) => {
+    try {
+      const key: string | any = process.env.JWT_KEY;
+      let decoded: { username: string, positions: string, iat: number, exp: number } | any = await jwt.decode(token, key);
+      if (!decoded.username) throw new Error;
+      return { username: decoded.username, positions: decoded.position };
+    } catch (error) {
+      return null;
+    }
+  }
+  const GetPositionFromUser = async () => {
+    const token: string | any = Cookies.get('token');
+    const user: string | any = await TokenDecoded(token);
+    if (user) {
+      let userPosition: Array<string> = user.positions.split(',');
+      setUserData({ username: user.username, positions: userPosition })
+    }
+
+  }
+
+  
+
+  useEffect(() => {
+    GetPositionFromUser();
+   
+  }, []);
+
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div >
+
+
+      <LeftTab />
+      <Header />
+      <div className="mp-container">
+          <SectionOne/>
+        <div className="flex acenter jcenter dirrow wrap">
+          <Graph />
+          <Notification />
         </div>
+
+
+
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
+

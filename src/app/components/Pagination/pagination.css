@@ -1,0 +1,20 @@
+.pagination-button{
+    background-color: #3D3B40;
+    height: 25px;
+    color: #ffffff;
+    margin-right: 5px;
+    margin: 2px 2px 2px 0;
+    border-radius: 5px;
+    border: none;
+}
+.pagination-button.nav{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.pagination-button.nav.current{
+    cursor: default;
+    background-color: #ffffff;
+    color: #3D3B40;
+    border: 1px solid #3D3B40;
+}

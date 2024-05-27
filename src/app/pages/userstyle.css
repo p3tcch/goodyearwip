@@ -1,0 +1,55 @@
+.userstyle-body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #191919;
+}
+.userstyle-container{
+    width: 400px;
+    height: auto;
+    padding: 20px 0 30px 0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-bottom: 3px solid #000000;
+}
+.userstyle-textbox{
+    text-align: center;
+    margin: 5px;
+    width: 80%;
+    height: 30px;
+    border: 1px solid #000000;
+}
+.userstyle-subcontainer{
+    width: 80%;
+    height: 50px;
+}
+.userstyle-link{
+    padding-right: 20px;
+    line-height: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+.userstyle-link:hover{
+    color: #5F5D9C;
+}
+.userstyle-btn{
+    width: 150px;
+    height: 30px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.userstyle-btn.normal{
+    width: 80px;
+}
+.userstyle-btn:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}

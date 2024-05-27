@@ -1,0 +1,86 @@
+.history-container{
+    width: 80vw;
+    height: auto;
+    border: 0px solid #454545;
+}
+.history-btn{
+    color: #ffffff;
+    background-color: #454545;
+    border: none;
+    height: 30px;
+    padding: 0px 10px 0px 10px;
+    margin: 1px 2px 1px 0;
+    border-radius: 5px;
+}
+.history-btn.position{
+    width: auto;
+}
+.history-btn.position.active{
+    color: #454545;
+    background-color: #ffffff;
+}
+.history-sub-container{
+    width: 50%;
+}
+table{
+    border-collapse: collapse;
+    font-size: 14px;
+    width: 100%;
+}
+td, th{
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+}
+tr{
+    height: 30px;
+    max-height: 30px;
+    overflow: hidden;
+   
+}
+.history-hour{
+    color: #858585;
+}
+
+.td.action{
+    width: 150px;
+}
+.td.name{
+    text-align: start;
+    overflow: hidden;
+    width: 100px;
+}
+.td.date{
+    padding-left: 5px;
+    width: 100px;
+    text-align: end;
+}
+.td.hour{
+    width: 50px;
+    text-align: start;
+}
+.history-sign{
+    height: 25px;
+    border: none;
+    color:#ffffff;
+    margin: 2px 0px 2px 0px;
+    min-width: 60px;
+    width: 60px;
+}
+.history-sign.create{
+    background-color: #508D69;
+}
+.history-sign.delete{
+    background-color: #A34343;
+}
+.history-sign.position{
+    background-color: #454545;
+    width: auto;
+
+}
+.history-div-name{
+    width: 40vw;
+    height: 30px;
+    line-height: 30px;
+}
+
+

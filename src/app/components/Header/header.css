@@ -1,0 +1,23 @@
+.header-container{
+    width: 100vw;
+    height: 40px;
+    background-color: #191919;
+    padding-left: 200px;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0px 0px 10px 0px #191919;
+}
+.header-usertxt{
+    padding: 0 40px 0px 10px;
+    text-decoration-line: none;
+    color: #ffffff;
+    cursor: pointer;
+ 
+}
+.header-link{
+    padding: 0 10px 0 10px;
+    text-decoration-line: none;
+    color: #ffffff;
+    cursor: pointer;
+ 
+}

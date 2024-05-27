@@ -1,0 +1,67 @@
+.filescategory-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #dddddd;
+}
+.filescategory-h1{
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+.filescategory-search-container{
+    width: 80%;
+    height: 30px;
+}
+.filescategory-search-box{
+    width: calc(130px + 5vw);
+    height: 25px;
+    text-align: center;
+}
+.filescategory-search-btn{
+    width: 80px;
+    height: 25px;
+    border: none;
+    background-color: #3D3B40;
+    color: #ffffff;
+}
+
+table{
+    border-collapse: collapse;
+    width: 80vw;
+    text-align: center;
+    background-color: #ffffff;
+}
+tr, td, th{
+   
+    width: 100px;
+    height: 30px;
+}
+th{
+    background-color: #3D3B40;
+    color: #ffffff;
+}
+.filescategory-button{
+    background-color: #3D3B40;
+    color: #ffffff;
+    margin-right: 5px;
+    margin: 2px 2px 2px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    text-decoration-line: none;
+}
+.filescategory-button.action{
+    display: block;
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+}
+.filescategory-button.action.delete{
+    background-color: #BE3144;
+}
+.filescategory-button.action.view{
+    background-color: #5D9C59;
+}
+.filescategory-button.nav{
+    width: 30px;
+    height: 30px;
+}

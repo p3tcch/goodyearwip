@@ -1,0 +1,26 @@
+.lefttab-container{
+    width: 200px;
+    height: 100vh;
+    background-color: #191919;
+    
+    padding: 50px 10px 10px 10px;
+    position: fixed;
+    z-index: 50;
+}
+
+.lefttab-link{
+    padding: 0 10px 0 10px;
+    min-height: 30px;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration-line: none;
+    margin: 5px 0 5px 0;
+}
+@media screen and (max-width: 992px) {
+    .lefttab-container{
+        width: 50px;
+    }
+    .lefttab-link{
+        font-size: 10px;
+    }
+  }

@@ -1,0 +1,49 @@
+.register-body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+}
+.register-container{
+    width: 400px;
+    height: auto;
+    padding: 20px 0 30px 0;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-bottom: 3px solid #000000;
+}
+.register-textbox{
+    text-align: center;
+    margin: 5px;
+    width: 80%;
+    height: 30px;
+    border: 1px solid #000000;
+}
+.register-subcontainer{
+    width: 80%;
+    height: 30px;
+}
+.register-link{
+    padding-right: 20px;
+    line-height: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.register-link:hover{
+    color: #5F5D9C;
+}
+.register-btn{
+    width: 80px;
+    height: 30px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.register-btn:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
