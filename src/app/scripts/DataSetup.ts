@@ -10,12 +10,12 @@ export default async function DataSetup
     
     let allPositionsArray:Array<{num: string, name:string, color: string}> = [];
     if(getAllPositions == true) {
-        const result = await fetchFunc(process.env.API_ROUTE + '/position/getall');
+        const result = await fetchFunc(process.env.API_ROUTE + 'position/getall');
         if(result.positions) allPositionsArray = result.positions;
     }
     let allFilesArray:Array<{num: string, name: string, url: string, created_at: string, position: string}>  = [];
     if(getAllFiles == true) {
-        const result = await fetchFunc(process.env.API_ROUTE + '/file/getall');
+        const result = await fetchFunc(process.env.API_ROUTE + 'file/getall');
         if(result.excelfiles) allFilesArray = result.excelfiles;
         
     }
@@ -26,7 +26,7 @@ export default async function DataSetup
     }
     let allHistoriesArray:any = [];
     if(getAllHistories == true) {
-        const result = await fetchFunc(process.env.API_ROUTE + '/history/getall');
+        const result = await fetchFunc(process.env.API_ROUTE + 'history/getall');
         allHistoriesArray = result.histories;
     }
 
