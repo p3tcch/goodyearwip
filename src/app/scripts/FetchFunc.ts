@@ -7,6 +7,7 @@ export default async function fetchFunc(url: string, object: Object = {}, token:
           credentials: 'include',
           headers: {
              'Content-Type': 'application/json',
+             'Access-Control-Allow-Origin':'*',
              
           },
           body: JSON.stringify(object),

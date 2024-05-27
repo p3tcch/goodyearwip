@@ -43,6 +43,7 @@ async function fetchFunc(url: string, object: Object = {}) {
           method: 'POST',
           headers: {
              'Content-Type': 'application/json',
+             'Access-Control-Allow-Origin':'*',
           },
           body: JSON.stringify(object),
        });
