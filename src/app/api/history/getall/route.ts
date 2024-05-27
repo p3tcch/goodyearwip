@@ -5,7 +5,8 @@ import jwt from 'jsonwebtoken';
 export async function POST(request: Request) {
     try {
         let result:any = await MysqlQuery("SELECT * FROM `history`;", []);
-        return Response.json({ txt:['Successfully create history'], histories: result});
+        let histories = result;
+        return Response.json({ txt:['Successfully create history'], histories});
     } 
     catch(err) {
         console.error(err);
